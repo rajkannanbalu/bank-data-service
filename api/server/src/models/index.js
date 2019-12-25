@@ -52,4 +52,9 @@ Object.keys(db).forEach((modelName) => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.banks = require('../models/banks.js')(sequelize, Sequelize);
+db.branches = require('../models/branches.js')(sequelize, Sequelize);
+db.banks.hasMany(db.branches, {foreignKey: 'bank_id'});
+db.branches.belongsTo(db.banks, {foreignKey: 'bank_id'});
+
 export default db;

@@ -1,7 +1,7 @@
 import config from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
-import storeRoutes from './server/routes/StoreRoutes';
+import bankRoutes from './server/routes/BankRoutes';
 
 config.config();
 
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 8000;
 
-app.use('/v1/store', storeRoutes);
+app.use('/v1', bankRoutes);
 
 app.get('/health', (req, res) => res.status(200).send({
   message: 'GeoLocationServer is healthy',
