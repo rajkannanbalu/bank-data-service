@@ -9,14 +9,13 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(cors());
 
 const port = process.env.PORT || 8000;
 
 app.use('/v1', bankRoutes);
 
 app.get('/health', (req, res) => res.status(200).send({
-  message: 'GeoLocationServer is healthy',
+  message: 'BankService is healthy',
 }));
 
 app.listen(port, () => {
