@@ -73,19 +73,25 @@
   -d '{
     "username": "admin",
     "password": "password"
-}' ``` to get auth key to use for all API's
+}' 
+``` 
+to get auth key to use for all API's
 
 - To test bank details by ifsc, use
-```curl -X GET \
+```
+curl -X GET \
   'http://bank-data-service.herokuapp.com/v1/bank?ifsc=ABHY0065001' \
   -H 'Host: bank-data-service.herokuapp.com' \
-  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc3MzM5NjMzLCJleHAiOjE1Nzc3NzE2MzN9.qSbNT2bw1LwzXjPxlIwKP0jC3s5nCDULsxUqYO8E7hk'```
+  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc3MzM5NjMzLCJleHAiOjE1Nzc3NzE2MzN9.qSbNT2bw1LwzXjPxlIwKP0jC3s5nCDULsxUqYO8E7hk'
+  ```
 
 - To test bank branches by city, bank name, use
-  ``` curl -X GET \
+  ``` 
+  curl -X GET \
   'http://bank-data-service.herokuapp.com/v1/bank/branches?bankName=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI&page=2&size=10' \
   -H 'Host: bank-data-service.herokuapp.com' \
-  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc3MzM5NjMzLCJleHAiOjE1Nzc3NzE2MzN9.qSbNT2bw1LwzXjPxlIwKP0jC3s5nCDULsxUqYO8E7hk'```  
+  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc3MzM5NjMzLCJleHAiOjE1Nzc3NzE2MzN9.qSbNT2bw1LwzXjPxlIwKP0jC3s5nCDULsxUqYO8E7hk'
+  ```  
 
 
 
