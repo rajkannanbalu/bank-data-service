@@ -2,6 +2,8 @@ import config from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
 import bankRoutes from './server/routes/BankRoutes';
+import login from './server/controllers/LoginController';
+import auth from './server/middleware/auth';
 
 config.config();
 
@@ -12,7 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 8000;
 
-app.use('/v1', bankRoutes);
+app.use('/login', login)
+app.use('/v1', auth.checkToken, bankRoutes);
 
 app.get('/health', (req, res) => res.status(200).send({
   message: 'BankService is healthy',
