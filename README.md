@@ -66,7 +66,8 @@
 ## How to Test
 - Use http://bank-data-service.herokuapp.com as server host and use any endpoints mentioned in [API Endpoints](api_endpoints)
 - Use 
-```curl -X GET \
+```
+curl -X GET \
   http://bank-data-service.herokuapp.com/login \
   -H 'Content-Type: application/json' \
   -H 'Host: bank-data-service.herokuapp.com' \
@@ -82,7 +83,7 @@ to get auth key to use for all API's
 curl -X GET \
   'http://bank-data-service.herokuapp.com/v1/bank?ifsc=ABHY0065001' \
   -H 'Host: bank-data-service.herokuapp.com' \
-  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc3MzM5NjMzLCJleHAiOjE1Nzc3NzE2MzN9.qSbNT2bw1LwzXjPxlIwKP0jC3s5nCDULsxUqYO8E7hk'
+  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc4MzgwMDI1LCJleHAiOjE1Nzg4MTIwMjV9.8wXXxMGoMrvrcSyhfP3zIGXKLRL71ii5oWbhtRNMufI'
   ```
 
 - To test bank branches by city, bank name, use
@@ -90,7 +91,7 @@ curl -X GET \
   curl -X GET \
   'http://bank-data-service.herokuapp.com/v1/bank/branches?bankName=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI&page=2&size=10' \
   -H 'Host: bank-data-service.herokuapp.com' \
-  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc3MzM5NjMzLCJleHAiOjE1Nzc3NzE2MzN9.qSbNT2bw1LwzXjPxlIwKP0jC3s5nCDULsxUqYO8E7hk'
+  -H 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc4MzgwMDI1LCJleHAiOjE1Nzg4MTIwMjV9.8wXXxMGoMrvrcSyhfP3zIGXKLRL71ii5oWbhtRNMufI'
   ```  
 
 
