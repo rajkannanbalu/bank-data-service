@@ -5,10 +5,10 @@ module.exports = {
 
   // If using onine database
   development: {
-    database: 'gqslyidi',
-    username: 'gqslyidi',
-    password: 'icIp7tSXCbbUOf2VNoCpfZjh1Avc-ypm',
-    host: 'rajje.db.elephantsql.com',
+    database: process.env.DB_NAME,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    host: process.env.DB_HOST,
     dialect: 'postgres'
   },
   
